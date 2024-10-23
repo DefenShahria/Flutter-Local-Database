@@ -1,16 +1,9 @@
 # ghaphy
 
 A new Flutter project.
+With local database where you can use and see information or data without network
 
-## Getting Started
+![screenshot-1729697565610](https://github.com/user-attachments/assets/300c6340-22a3-4b05-8fb7-ea08bab16eca)
+![screenshot-1729697582431](https://github.com/user-attachments/assets/e932d234-6780-4adc-a2d6-8d6c208d46a0)
+![screenshot-1729697591391](https://github.com/user-attachments/assets/9123663d-c66c-472a-a701-c55f48d5a9b1)
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
