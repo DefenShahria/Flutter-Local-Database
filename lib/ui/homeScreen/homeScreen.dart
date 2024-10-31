@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:ghaphy/ui/auth/auth_service.dart';
+import 'package:ghaphy/ui/auth/login.dart';
 import 'package:ghaphy/ui/homeScreen/widgets/homapage_card.dart';
 import '../../statemanager/all_Product_Controller.dart';
 
@@ -11,7 +13,9 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  // For testing
   final bool icheck = true;
+  final AuthService authService = AuthService();
 
   @override
   void initState() {
@@ -30,7 +34,15 @@ class _MyHomePageState extends State<MyHomePage> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
+          automaticallyImplyLeading: false,
           title: const Text('Product List'),
+          actions: [
+            IconButton(onPressed: ()async{
+              await authService.signOut();
+              Get.to(const LoginPage());
+
+            }, icon: const Icon(Icons.exit_to_app))
+          ],
         ),
         body: GetBuilder<ProductController>(
           builder: (productController) {
@@ -46,25 +58,25 @@ class _MyHomePageState extends State<MyHomePage> {
             // }
             return Column(
               children: [
-                ElevatedButton(
-                  onPressed: () {
-                    // Printing all product data from the database
-                    for (var product in productController.productData) {
-                      print('ID: ${product.id}');
-                      print('Title: ${product.title}');
-                      print('Price: ${product.price}');
-                      print('Description: ${product.description}');
-                      print('Category: ${product.category}');
-                      print('Image: ${product.image}');
-                      if (product.rating != null) {
-                        print('Rating: ${product.rating!.rate}');
-                        print('Rating Count: ${product.rating!.count}');
-                      }
-                      print('--------------------------------------------------');
-                    }
-                  },
-                  child: const Text("Check"),
-                ),
+                // ElevatedButton(
+                //   onPressed: () {
+                //     // Printing all product data from the database
+                //     for (var product in productController.productData) {
+                //       print('ID: ${product.id}');
+                //       print('Title: ${product.title}');
+                //       print('Price: ${product.price}');
+                //       print('Description: ${product.description}');
+                //       print('Category: ${product.category}');
+                //       print('Image: ${product.image}');
+                //       if (product.rating != null) {
+                //         print('Rating: ${product.rating!.rate}');
+                //         print('Rating Count: ${product.rating!.count}');
+                //       }
+                //       print('--------------------------------------------------');
+                //     }
+                //   },
+                //   child: const Text("Check"),
+                // ),
                 Expanded(
                   child: ListView.builder(
                     scrollDirection: Axis.vertical,

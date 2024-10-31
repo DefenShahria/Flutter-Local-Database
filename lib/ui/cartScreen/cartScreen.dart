@@ -28,7 +28,7 @@ class _MyCartPageState extends State<MyCartPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Cart Screen")),
+      appBar: AppBar(title: Text("Cart Screen"),automaticallyImplyLeading: false,),
       body: Column(
         children: [
           Expanded(
@@ -54,7 +54,8 @@ class _MyCartPageState extends State<MyCartPage> {
                         description: cartItem.description,
                         price: cartItem.price,
                         quantity: cartItem.quantity,
-                        onDelete: _refreshCartList, // Pass the refresh function to the cart item
+                        onDelete:
+                            _refreshCartList, // Pass the refresh function to the cart item
                       );
                     },
                   );
@@ -62,6 +63,23 @@ class _MyCartPageState extends State<MyCartPage> {
               },
             ),
           ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: SizedBox(
+                height: 50,
+                width: double.infinity,
+                child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.blue,
+                      // Set the button's background color
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(
+                            10), // Match the button's radius with the container
+                      ),
+                    ),
+                    onPressed: () {},
+                    child: Text("Place Order",style: TextStyle(color: Colors.white,fontSize: 20),))),
+          )
         ],
       ),
     );

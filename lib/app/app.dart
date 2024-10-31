@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ghaphy/ui/bottomNavBar.dart';
+import '../ui/auth/auth_gate.dart';
 import 'controllerBinding.dart';
-
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -17,7 +16,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       initialBinding: ControllerBinder(),
-      home: const MainBottomNavScreen(),
+      home: const AuthGate(),
     );
   }
 }
