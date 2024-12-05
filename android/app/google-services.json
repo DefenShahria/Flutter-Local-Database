@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "495281546281",
+    "project_id": "shop-878c4",
+    "storage_bucket": "shop-878c4.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:495281546281:android:6e9fa5029587c630a36838",
+        "android_client_info": {
+          "package_name": "com.example.ghaphy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCiF3Hqx1mB2gTB_AlADsVG5rOzNLvWTjQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
